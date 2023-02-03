@@ -1,0 +1,7 @@
+.card-inmueble{
+  width: 400px;
+}
+
+.card-inmueble:hover{
+  cursor: pointer;
+}
