@@ -1,11 +1,8 @@
 import React,{useState, useContext} from "react";
 import { AppContext } from "../context/AppContext";
-import SlideProperty from "./SlideProperty";
+
 import '../styles/templates/header.css'
 function Header() {
-  const {state} = useContext(AppContext)
-  console.log(state)
-
   return(
     <nav className="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
       <div className="container">
@@ -75,7 +72,6 @@ function Header() {
           </ul>
         </div>
       </div>
-      {(state.showSlide)?<SlideProperty/>:null}
     </nav>
   );
 }

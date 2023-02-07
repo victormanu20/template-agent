@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { data } from '../hooks/getInmuebles';
 
 const initialState = {
     showSlide:false
@@ -17,7 +18,8 @@ const useInitialState = () => {
 
     return{
         state,
-        clickSlide
+        clickSlide,
+        data
     }
 }
 

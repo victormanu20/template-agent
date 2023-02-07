@@ -1,7 +1,19 @@
 .slide-property{
   position: absolute;
   right: 0;
+  top: 60px;
   width: 60%;
   background-color: white;
   border: 2px solid black;
+  overflow-y: scroll;
+  z-index: 20;
 }
+.offcanvas{
+  width: 60% !important;
+}
+@media (max-width:600px) {
+  .offcanvas{
+    width: 100% !important;
+  }
+}
+

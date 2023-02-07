@@ -1,10 +1,7 @@
 import './App.css';
 import './bootstrap.css'
-import Header from './templates/Header';
-import Carrousel from './templates/Carrousel';
-import Inmuebles from './templates/Inmuebles';
-import Blog from './templates/Blog';
-import About from './templates/About';
+
+import Home from './pages/Home';
 import { AppContext } from './context/AppContext.js'
 import { useInitialState } from './context/context';
 
@@ -15,11 +12,8 @@ function App() {
       InitialState
     }>
       <div className="App">
-        <Header/>
-        <Carrousel/>
-        <Inmuebles/>
-        <Blog/>
-        <About/>
+
+        <Home/>
       </div>
     </AppContext.Provider>
   );

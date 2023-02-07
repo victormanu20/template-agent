@@ -1,9 +1,31 @@
-import React from "react";
 import '../styles/templates/Inmuebles.css'
 import CardInmueble from "../components/CardInmueble";
+import React,{ useContext, useState} from "react";
+import { AppContext } from "../context/AppContext.js"
+import axios from 'axios';
 
-const Inmuebles = ({props}) => {
-  console.log(props)
+const Inmuebles = () => {
+  const [inmuebles,setInmuebles] = useState({});
+
+  const BASE_URL = "http://192.168.5.15:8000/"
+
+  // const getInmuebles = async ()  =>{
+  //   console.log('datos')
+  //   const res = await fetch(`${BASE_URL}api/pagina_web/filter/emporio-bienes-y-capitales-sas`,{method:'POST'});
+  //   console.log(res)
+  // }
+  // getInmuebles()
+
+  function getListInmuebles(ctx){
+    axios.get(`http://192.168.5.15:8000/api/pagina_web/filter/emporio-bienes-y-capitales-sas`)
+    .then(res => {
+      const persons = res;
+      console.log(persons)
+    })
+  }
+  getListInmuebles()
+
+
   return (
     <section className="section-property section-t8">
       <div className=" container-cards">
